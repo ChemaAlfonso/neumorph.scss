@@ -9920,6 +9920,13 @@ body {
   color: #75a1e5;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 /*========================
  Anchors general
 ========================*/
