@@ -1,0 +1,24 @@
+{
+  "name": "neumorph.scss",
+  "version": "0.0.1",
+  "description": "Easy neumorpysm designs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./src/assets/scss/neumorph.scss ./dist/css/neumorph.css",
+    "sass-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/neumorph.min.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChemaAlfonso/uERP.git"
+  },
+  "author": "Chema Alfonso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChemaAlfonso/uERP/issues"
+  },
+  "homepage": "https://github.com/ChemaAlfonso/uERP#readme",
+  "devDependencies": {
+    "sass": "^1.25.0"
+  }
+}

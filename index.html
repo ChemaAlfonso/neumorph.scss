@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="Chema Alfonso">
+    <title>Neumorph.scss</title>
+    <link rel="stylesheet" href="./dist/css/neumorph.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg np-element fixed-top">
+                    
+                    <a class="navbar-brand" target="_blank" target="_blank" href="https://tempuscode.com">
+                        <img src="./src/assets/img/logo.png" width="30" height="30" alt=""> Neumorph.scss
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Elements
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#Basics">Basics</a>
+                            <a class="dropdown-item" href="#Shadows">Shadows</a>
+                            <a class="dropdown-item" href="#Lists">Lists</a>
+                            <a class="dropdown-item" href="#Colors">Colors</a>
+                            <a class="dropdown-item" href="#Hover">Hover</a>
+                            <a class="dropdown-item" href="#Buttons">Buttons</a>
+                            <a class="dropdown-item" href="#Divider">Divider</a>
+                            <a class="dropdown-item" href="#Shapes">Shapes</a>
+                            <a class="dropdown-item" href="#Forms">Forms</a>
+                            <a class="dropdown-item" href="#Tables">Tables</a>
+                            <a class="dropdown-item" href="#Images">Images</a>
+                            <a class="dropdown-item" href="#Sizing">Sizing</a>
+                          </div>
+                        </li>
+                          
+                        <li class="nav-item">
+                          <a class="nav-link" target="_blank" href="https://github.com/ChemaAlfonso/neumorph.scss">Github</a>
+                        </li>
+                          
+                        <li class="nav-item">
+                          <a class="nav-link" target="_blank" href="https://tempuscode.com">Tempus</a>
+                        </li>
+                        
+                      </ul>
+                      
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-6 offset-md-3 mt-5 pt-5">
+                <h1 class="np-element text-center">Neumorph.scss</h1>
+            </div>
+            
+
+            <div class="col-12 my-3" id="Basics">
+                <h3 class="np-table-heading">Basic Element</h3>
+                <div class="np-element">
+                    <p>.np-element</p>
+                </div>
+            </div>
+            
+
+            <div class="col-12 my-3">
+                <h3 class="np-table-heading">Colorize</h3>
+                <div class="np-colorize">
+                    <p>.np-colorize</p>
+                </div>
+            </div>
+
+            <div class="col-12 my-3" id="Shadows">
+                <h3 class="np-table-heading">Shadows</h3>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="np-element np-hover np-square-xxl np-shadow-double">.np-shadow-double</div>
+                    <div class="np-element np-hover np-square-xxl np-shadow mx-3">.np-shadow-shadow</div>
+                    <div class="np-element np-hover-inverse np-square-xxl np-shadow-inverse">.np-shadow-inverse</div>
+                </div>
+            </div>
+
+            <div class="col-12 my-3" id="Lists">
+                <h3 class="np-table-heading">Lists - np-table-heading</h3>
+                <ul class="np-list">
+                    <li class="np-list-element">.np-list > .np-list-element</li>
+                    <li class="np-list-element">.np-list > .np-list-element</li>
+                    <li class="np-list-element">.np-list > .np-list-element</li>
+                    <li class="np-list-element">.np-list > .np-list-element</li>
+                    <li class="np-list-element">.np-list > .np-list-element</li>
+                </ul>
+            </div>
+            
+            <div class="col-12 col-md-6 my-3" id="Colors">
+                <h3 class="np-table-heading">Colors</h3>
+                <ul class="np-list">
+                    <li class="np-list-element np-text-primary">.np-text-primary</li>
+                    <li class="np-list-element np-text-success">.np-text-success</li>
+                    <li class="np-list-element np-text-accent">.np-text-accent</li>
+                    <li class="np-list-element np-text-warn">.np-text-warn</li>
+                    <li class="np-list-element np-text-light">.np-text-light</li>
+                    <li class="np-list-element np-text-foreground">.np-text-foreground</li>
+                </ul>
+            </div>
+             
+            <div class="col-12 col-md-6 my-3" id="Backgrounds">
+                <h3 class="np-table-heading">Backgrounds</h3>
+                <ul class="np-list">
+                    <li class="np-list-element np-bg-primary">.np-bg-primary</li>
+                    <li class="np-list-element np-bg-success">.np-bg-success</li>
+                    <li class="np-list-element np-bg-accent">.np-bg-accent</li>
+                    <li class="np-list-element np-bg-warn">.np-bg-warn</li>
+                    <li class="np-list-element np-bg-light">.np-bg-light</li>
+                    <li class="np-list-element np-bg-foreground">.np-bg-foreground</li>
+                </ul>
+            </div>
+            
+            <div class="col-12 col-md-6 my-3" id="Hover">
+                <h3 class="np-table-heading">Hover</h3>
+                <ul class="np-list">
+                    <li class="np-element np-hover">.np-element.np-hover</li>
+                </ul>
+            </div>
+            
+            <div class="col-12 col-md-6 my-3">
+                <h3 class="np-table-heading">Hover inverse</h3>
+                <ul class="np-list">
+                    <li class="np-element np-shadow-inverse np-hover-inverse">np-element.np-shadow-inverse.np-hover-inverse</li>
+                </ul>
+            </div>
+            
+            <div class="col-12 my-3" id="Buttons">
+                <h3 class="np-table-heading">Buttons</h3>
+                <button class="np-btn">np-btn</button>
+            </div>
+            
+            <div class="col-12 col-md-6 my-3" id="Divider">
+                <h3 class="np-table-heading">Divider .np-divider</h3>
+                <div class="np-divider"></div>
+            </div>
+            <div class="col-12 col-md-6 my-3">
+                <h3 class="np-table-heading">Fat divider .np-divider-fat</h3>
+                <div class="np-divider-fat"></div>
+            </div>
+
+            <div class="col-12" id="Shapes">
+                <h3 class="np-table-heading">Shapes</h3>
+            </div>
+            <div class="col-12">
+                <h5 class="np-table-heading">Squares</h5>
+            </div>
+
+            <div class="col-12 my-3 d-flex flex-wrap justify-content-center align-items-center">
+                <button class="np-element np-hover np-square-sm">sm</button>
+                <button class="np-element np-hover np-square-md">md</button>
+                <button class="np-element np-hover np-square-lg">np-square-lg</button>
+                <button class="np-element np-hover np-square-xl">np-square-xl</button>
+                <button class="np-element np-hover np-square-xxl">np-square-xxl</button>
+            </div>
+
+            <div class="col-12">
+                <h5 class="np-table-heading">Circles</h5>
+            </div>
+            <div class="col-12 d-flex flex-wrap justify-content-center align-items-center">
+                <button class="np-element np-hover np-circle-sm">sm</button>
+                <button class="np-element np-hover np-circle-md">md</button>
+                <button class="np-element np-hover np-circle-lg">np-circle-lg</button>
+                <button class="np-element np-hover np-circle-xl">np-circle-xl</button>
+                <button class="np-element np-hover np-circle-xxl">np-circle-xxl</button>
+            </div>
+
+            <div class="col-12 my-3" id="Forms">
+                <h3 class="np-table-heading">Forms</h3>
+                <div class="np-form-group">
+                    <label for="np-element">Label</label>
+                    <input type="text" class="np-form-element np-text-accent" value=".np-form-group > .np-form-element">
+                </div>
+                <div class="np-form-group">
+                    <label for="np-element">Label</label>
+                    <input type="text" class="np-form-element np-text-accent" value=".np-form-group > .np-form-element">
+                </div>
+                <div class="np-form-group">
+                    <label for="np-option">Label</label>
+                    <select name="np-option" id="np-option" class="np-form-element">
+                        <option value="1">.np-form-group > .np-form-element</option>
+                        <option value="1">Option element</option>
+                        <option value="1">Option element</option>
+                        <option value="1">Option element</option>
+                        <option value="1">Option element</option>
+                    </select>
+                </div>
+                <div class="np-form-group">
+                    <input type="text" class="np-form-element" placeholder="Placeholder">
+                    <input type="text" class="np-form-element" placeholder="Placeholder">
+                </div>
+            </div>
+
+            <div class="col-12 mt-3" id="Tables">
+                <h3 class="np-table-heading">Tables</h3>
+            </div>
+            <div class="col-12">
+                <table class="np-table">
+                    <tr class="np-table-heading">
+                        <th>np-table > np-table-heading</th>
+                        <th>Heading</th>
+                        <th>Heading</th>
+                        <th>Heading</th>
+                    </tr>
+                    <tr class="np-table-row">
+                        <td>np-table > .np-table-row</td>
+                        <td>row</td>
+                        <td>row</td>
+                        <td>row</td>
+                    </tr>
+                    <tr class="np-table-row">
+                        <td>np-table > .np-table-row</td>
+                        <td>row</td>
+                        <td>row</td>
+                        <td>row</td>
+                    </tr>
+                    <tr class="np-table-row">
+                        <td>np-table > .np-table-row</td>
+                        <td>row</td>
+                        <td>row</td>
+                        <td>row</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="col-12 mt-3" id="Images">
+                <h3 class="np-table-heading">Images</h3>
+                <span>.np-img-wrapper > np-img-expand</span>
+            </div>
+            <div class="col-5 np-img-wrapper mb-5 mr-auto mt-3">
+                <img src="https://picsum.photos/600/300?grayscale" class="np-img-expand" alt="https://picsum.photos/seed/picsum/200/300">
+            </div>
+            <div class="col-5 np-img-wrapper mb-5 np-element">
+                <img src="https://picsum.photos/600/300?grayscale" class="np-img-expand" alt="https://picsum.photos/seed/picsum/200/300">
+            </div>
+            
+            <div class="col-12 my-3" id="Sizing">
+                <h3 class="np-table-heading">Sizing</h3>
+                <strong>Using font-size</strong>
+                <ul class="np-list">
+                    <li class="np-list-element np-0-5x">np-0-5x</li>
+                    <li class="np-list-element np-1-5x">np-1-5x</li>
+                    <li class="np-list-element np-2x">np-2x</li>
+                    <li class="np-list-element np-2-5x">np-2-5x</li>
+                    <li class="np-list-element np-3x">np-3x</li>
+                </ul>
+            </div>
+            <div class="col-12 my-3">
+                <h3 class="np-table-heading">Sizing tranform</h3>
+                <strong>Using transform</strong>
+                <p>Can use transform same way with "tx" clases</p>
+                
+                <ul class="np-list">
+                    <li class="np-list-element">np-0-5tx</li>
+                    <li class="np-list-element">np-1-5tx</li>
+                    <li class="np-list-element">np-2tx</li>
+                    <li class="np-list-element">np-2-5tx5x</li>
+                    <li class="np-list-element">np-3tx </li>
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-12 np-element text-right">
+        Neumorph.scss By: <a href="https://tempuscode.com">Chema Alfonso</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+</body>
+</html>

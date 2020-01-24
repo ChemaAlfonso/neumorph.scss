@@ -1,0 +1,451 @@
+/*!
+ * Neumorph.scss v4.4.1 (https://tempuscode.com/)
+ * Copyright 2020 Chema Alfonso
+ * Licensed under MIT (https://github.com/ChemaAlfonso/neumorph.scss/blob/master/LICENSE)
+ */
+  
+/*====================================
+ Import theming vars
+=====================================*/
+@import '../bootstrap/scss/bootstrap.scss';
+
+/*====================================
+ Import theming vars
+=====================================*/
+@import './themes/np-theme-softblue.scss';
+
+/*========================
+ Mixings
+========================*/
+@mixin np-colorize {
+    background: $background;
+    color: $foreground; 
+}
+
+@mixin np-colorize-inverse {
+    background: $foreground;
+    color: $background; 
+}
+
+@mixin np-shadow {
+    box-shadow: 2px 2px 6px 0px $shadow, -2px -2px 6px 0px $light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $light;
+}
+
+@mixin np-shadow-inverse {
+    box-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $light, inset 2px 2px 6px 0px $shadow, inset  -2px -2px 6px 0px $light;
+}
+
+@mixin np-shadow-double {
+    box-shadow: 2px 2px 6px 0px $shadow, -2px -2px 6px 0px $light, inset 2px 2px 6px 0px $shadow, inset  -2px -2px 6px 0px $light;
+}
+
+@mixin np-text-shadow {
+    text-shadow: 2px 2px 6px 0px $shadow, -2px -2px 6px 0px $light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $light;
+}
+
+@mixin np-text-shadow-inverse {
+    text-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $light, inset 2px 2px 6px 0px $shadow, inset  -2px -2px 6px 0px $light;
+}
+
+@mixin basic-element {
+    @include np-colorize; 
+    @include np-shadow;
+    border-radius: 4px;
+    padding: .3em;
+    border: none;
+}
+
+/*========================
+ Scroll
+========================*/
+::-webkit-scrollbar {
+    width: 3px;
+    background: $background;
+}
+::-webkit-scrollbar-thumb {
+    width: 3px;
+    background: $foreground;
+}
+
+
+/*========================
+ General
+========================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body{
+    background: $background;
+    color: $foreground;
+}
+
+/*========================
+ Anchors general
+========================*/
+a{
+    color: $foreground;
+    text-decoration: none;
+    &:hover{
+        color: $accent;
+        text-decoration: none;
+    }
+    &.selected{
+        color: $accent;
+        @include np-shadow-inverse;
+    }
+    &.active{
+        color: $accent;
+        @include np-shadow-inverse;
+    }
+    &.dropdown-item{
+        @include np-colorize();
+        padding-top: 0;
+        transition: all .3s;
+        &:hover{
+            @include np-shadow-inverse;
+            color: $accent;
+        }
+    }
+}
+
+/*========================
+ Divs general
+========================*/
+div{
+    &.dropdown-menu{
+        @include np-colorize();
+    }
+}
+
+/*========================
+ Np main
+========================*/
+.np{
+
+    /*=================
+     Basics
+    ==================*/
+    &-element{     
+        @include basic-element; 
+    }
+    
+    &-colorize{     
+        @include np-colorize; 
+        &-inverse{     
+            @include np-colorize-inverse; 
+        }
+    }
+
+    &-shadow{      
+        @include np-shadow; 
+        &-inverse{      
+            @include np-shadow-inverse; 
+        }
+        &-double{      
+            @include np-shadow-double(); 
+        }
+    }
+    
+    &-hover{ 
+        transition: all .3s;
+        &:hover{ 
+            @include np-shadow-inverse;  
+        } 
+    }
+     
+    &-hover-inverse{ 
+        transition: all .3s;
+        &:hover{ 
+            @include np-shadow;  
+        } 
+    }
+
+    /*=================
+     Buttons
+    ==================*/
+    &-btn{ 
+        @include basic-element; 
+        border: none; 
+        transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        line-height: 1.8rem;
+        padding: .4rem;
+        cursor: pointer;
+
+        &:hover{ 
+            @include np-shadow-inverse;  
+        }
+    }
+
+    
+    /*=================
+     Shapes
+    ==================*/
+    &-divider{
+        @include np-colorize; 
+        @include np-shadow; 
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin: .8em auto;
+        float: none;
+
+        &-fat{
+            @include np-colorize; 
+            @include np-shadow; 
+            display: block;
+            width: 100%;
+            height: 8px;
+            margin: .8em auto;
+            float: none;
+            border-radius: 4px;
+        }
+    }
+
+    &-square{ 
+
+        &-sm{
+            width: 6.5vh;
+            height: 6.5vh;
+            overflow: hidden;
+        }
+        &-md{
+            width: 10.5vh;
+            height: 10.5vh;
+            overflow: hidden;
+        }
+        &-lg{
+            width: 15.5vh;
+            height: 15.5vh;
+            overflow: hidden;
+        }
+        &-xl{
+            width: 20vh;
+            height: 20vh;
+            overflow: hidden;
+        }
+        &-xxl{
+            width: 26vh;
+            height: 26vh;
+            overflow: hidden;
+        }
+    }
+
+    &-circle{ 
+
+        &-sm{
+            width: 6.5vh;
+            height: 6.5vh;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-md{
+            width: 10.5vh;
+            height: 10.5vh;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-lg{
+            width: 15.5vh;
+            height: 15.5vh;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-xl{
+            width: 20vh;
+            height: 20vh;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-xxl{
+            width: 26vh;
+            height: 26vh;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+
+    /*=================
+     Lists
+    ==================*/
+    &-list{
+        list-style: none;
+        padding-left: 0;
+        &-element{
+            @include basic-element; 
+            height: 100%;
+            padding-left: 1rem;
+            line-height: 2rem;
+            margin-bottom: .4rem;
+        }
+    }
+
+    /*=================
+     Forms
+    ==================*/
+    &-form{
+
+        &-group{
+            @include basic-element;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: .3rem;
+        }
+        &-element{
+            @include basic-element; 
+            padding: .6rem .5rem;
+            color: $accent;
+            margin-bottom: .3rem;
+        }
+    }
+
+    &-table{
+        @include basic-element();
+        width: 100%;
+
+
+        &-heading{
+            height: 6.5vh;
+            padding-top: .8rem;
+        }
+        &-row{
+            @include basic-element; 
+            height: 100%;
+            min-height: 6.5vh;
+            padding-top: .4rem;
+            padding-bottom: .4rem;
+            padding-left: 1rem;
+            line-height: 6.5vh;
+        }
+    }
+
+    /*=================
+     Sizes
+    ==================*/
+    &-0-5x{
+        font-size: 0.5rem;
+    }
+
+    &-1-5x{
+        font-size: 1.5rem;
+    }
+
+    &-2x{
+        font-size: 2rem;
+    }
+
+    &-2-5x{
+        font-size: 2.5rem;
+    }
+
+    &-3x{
+        font-size: 3rem;
+    }
+
+    &-0-5tx{
+        transform: scale(0.5);
+    }
+
+    &-1-5tx{
+        transform: scale(1.15);
+    }
+
+    &-2tx{
+        transform: scale(1.5);
+    }
+    &-3tx{
+        transform: scale(2);
+    }
+
+    /*=================
+     Text
+    ==================*/
+    &-text{
+        &-shadow{      
+            @include np-text-shadow; 
+            &-inverse{      
+                @include np-text-shadow-inverse; 
+            }
+        }
+
+        &-primary{      
+            color: $primary; 
+        }
+        &-success{      
+            color: $success; 
+        }
+        &-accent{      
+            color: $accent; 
+        }
+        &-warn{      
+            color: $warn; 
+        }
+        &-light{      
+            color: $light; 
+        }
+        &-foreground{      
+            color: $foreground; 
+        }
+    }
+
+    /*=================
+     Background
+    ==================*/
+    &-bg{
+        &-shadow{      
+            @include np-text-shadow; 
+            &-inverse{      
+                @include np-text-shadow-inverse; 
+            }
+        }
+
+        &-primary{      
+            background: $primary; 
+        }
+        &-success{      
+            background: $success; 
+        }
+        &-accent{      
+            background: $accent; 
+        }
+        &-warn{      
+            background: $warn; 
+        }
+        &-light{      
+            background: $light; 
+        }
+        &-foreground{      
+            background: $foreground; 
+        }
+    }
+
+    /*========================
+    Images
+    ========================*/
+    &-img{
+        &-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        &-expand{
+            height: 100%;            
+        }
+    }
+    
+    /*========================
+     Cursor
+    ========================*/
+    &-pointer{
+        cursor: pointer;
+    }
+
+}
