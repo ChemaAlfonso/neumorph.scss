@@ -5,7 +5,7 @@
  */
   
 /*====================================
- Import theming vars
+ Import Bootstrap
 =====================================*/
 // @import '../bootstrap/scss/bootstrap.scss';
 // @import '../bootstrap/scss/bootstrap-grid.scss';
@@ -143,11 +143,17 @@ a{
         &:hover{
             @include np-shadow-inverse;
             color: $accent;
+            background: $background;
         }
         &:active{
             @include np-shadow-inverse;
             color: $accent;
-            background: transparent;
+            background: $background;
+        }
+        &:focus{
+            @include np-shadow-inverse;
+            color: $accent;
+            background: $background;
         }
     }
 }

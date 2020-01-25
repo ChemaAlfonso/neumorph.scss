@@ -4329,11 +4329,17 @@ a.dropdown-item {
 a.dropdown-item:hover {
   box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
   color: #eba3a3;
+  background: #383838;
 }
 a.dropdown-item:active {
   box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
   color: #eba3a3;
-  background: transparent;
+  background: #383838;
+}
+a.dropdown-item:focus {
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
+  color: #eba3a3;
+  background: #383838;
 }
 
 /*========================
