@@ -8,11 +8,12 @@
  Import theming vars
 =====================================*/
 @import '../bootstrap/scss/bootstrap.scss';
+// @import '../bootstrap/scss/bootstrap-grid.scss';
 
 /*====================================
  Import theming vars
 =====================================*/
-@import './themes/np-theme-softblue.scss';
+@import './themes/np-theme.scss';
 
 /*========================
  Mixings
@@ -51,7 +52,7 @@
     @include np-colorize; 
     @include np-shadow;
     border-radius: 4px;
-    padding: .3em;
+    padding: .4rem 1rem;
     border: none;
 }
 
@@ -67,6 +68,36 @@
     background: $foreground;
 }
 
+/*========================
+    Focus
+========================*/
+input.np-element:focus,
+select.np-element:focus,
+textarea.np-element:focus,
+textarea.np-form-element:focus,
+input.np-form-element:focus,
+select.np-form-element:focus,
+button.np-btn:focus,
+.np-btn:focus,
+.np-form-element:focus,
+.np-square-sm:focus,
+.np-square-md:focus,
+.np-square-lg:focus,
+.np-square-xl:focus,
+.np-square-xxl:focus,
+.np-circle-sm:focus,
+.np-circle-md:focus,
+.np-circle-lg:focus,
+.np-circle-xl:focus,
+.np-circle-xxl:focus {
+    outline: none;
+    @include np-shadow-inverse; 
+}
+
+.np-shadow-inverse:focus {
+    outline: none;
+    @include np-shadow; 
+}
 
 /*========================
  General
@@ -81,13 +112,9 @@ html,
 body{
     background: $background;
     color: $foreground;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 200;
+    font-style: normal;
 }
 
 /*========================
@@ -115,6 +142,11 @@ a{
         &:hover{
             @include np-shadow-inverse;
             color: $accent;
+        }
+        &:active{
+            @include np-shadow-inverse;
+            color: $accent;
+            background: transparent;
         }
     }
 }
@@ -317,11 +349,11 @@ div{
         @include basic-element();
         width: 100%;
 
-
         &-heading{
             height: 6.5vh;
             padding-top: .8rem;
         }
+
         &-row{
             @include basic-element; 
             height: 100%;
@@ -338,6 +370,10 @@ div{
     ==================*/
     &-0-5x{
         font-size: 0.5rem;
+    }
+
+    &-0-8x{
+        font-size: 0.8rem;
     }
 
     &-1-5x{
@@ -358,6 +394,10 @@ div{
 
     &-0-5tx{
         transform: scale(0.5);
+    }
+
+    &-0-8tx{
+        transform: scale(0.8);
     }
 
     &-1-5tx{

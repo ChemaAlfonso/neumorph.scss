@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./src/assets/scss/neumorph.scss ./dist/css/neumorph.css",
-    "sass-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/neumorph.min.css --style=compressed"
+    "sass-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/neumorph.min.css --style=compressed",
+    "sass-grid": "sass ./src/assets/scss/neumorph.scss ./dist/css/neumorph-grid.css",
+    "sass-grid-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/neumorph-grid.min.css --style=compressed",
+    "sass-full": "sass ./src/assets/scss/neumorph.scss ./dist/css/neumorph-full.css",
+    "sass-full-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/neumorph-full.min.css --style=compressed"
   },
   "repository": {
     "type": "git",

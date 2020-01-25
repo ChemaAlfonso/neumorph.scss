@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Author" content="Chema Alfonso">
     <title>Neumorph.scss</title>
-    <link rel="stylesheet" href="./dist/css/neumorph.css">
+    <link rel="stylesheet" href="./dist/css/neumorph-full.min.css">
 </head>
 <body>
 
@@ -68,31 +68,89 @@
             <div class="col-12 col-md-6 offset-md-3 mt-5 pt-5">
                 <h1 class="np-element text-center">Neumorph.scss</h1>
             </div>
+
+            <div class="col-12 my-4">
+                <div class="row">
+                    <div class="col-12 np-element my-1">
+                        <h2>Getting started</h2>
+                        <div class="np-divider"></div>
+                        <p>Neumorph.scss is a bundle of bootstrap 4 styles integrated with neumorphism.scss clases to deal with soft design.</p>
+                        <p>It brings you a layer between bootstrap and your styles to do it easy.</p>
+                        <p class="text-right">Check on <strong><a class="np-text-accent" target="_blank" href="https://github.com/ChemaAlfonso/neumorph.scss">Github</a></strong></p>
+                    </div>
+                    <div class="col-12 np-element my-1">
+                        <h2>Instalation</h2>
+                        <div class="np-divider"></div>
+                        <p>You only need to import one of the variations stylesheet on your proyect and start writting clases at html elements, like you do with bootstrap.</p>
+                    </div>
+                    <div class="col-12 np-element my-1">
+                        <h2>Variations</h2>
+                        <div class="np-divider"></div>
+                        <p>You can use Neumorph.scss standalone too.</p>
+                        <p>Check diferent variations and choose what you need, Neumorph.scss only, with bootstrap styles or with bootstrap grid only.</p>
+                        <ul class="np-list">
+                            <li class="np-list-element np-hover">neumorph.css</li>
+                            <li class="np-list-element np-hover">neumorph.min.css</li>
+                            <li class="np-list-element np-hover">neumorph-grid.css</li>
+                            <li class="np-list-element np-hover">neumorph-grid.min.css</li>
+                            <li class="np-list-element np-hover">neumorph-full.css</li>
+                            <li class="np-list-element np-hover">neumorph-full.min.css</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             
 
             <div class="col-12 my-3" id="Basics">
                 <h3 class="np-table-heading">Basic Element</h3>
+                <p>Integrates an element with base neumorphism design</p>
                 <div class="np-element">
-                    <p>.np-element</p>
+                    <span>Basic Element</span>
                 </div>
+                       
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;div class="np-element"&#62;
+        &#60;span&#62;Basic Element&#60;/span&#62;
+    &#60;/div&#62;
+</pre>
             </div>
+     
             
 
             <div class="col-12 my-3">
                 <h3 class="np-table-heading">Colorize</h3>
+                <p>Integrates an element with base colors</p>
                 <div class="np-colorize">
                     <p>.np-colorize</p>
                 </div>
+
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;div class="np-colorize"&#62;
+        &#60;p&#62;.np-colorize&#60;/p&#62;
+    &#60;/div&#62;
+</pre>
             </div>
 
             <div class="col-12 my-3" id="Shadows">
                 <h3 class="np-table-heading">Shadows</h3>
+                <p>Integrates an element with diferent shadows</p>
                 <div class="col-12 d-flex justify-content-center">
-                    <div class="np-element np-hover np-square-xxl np-shadow-double">.np-shadow-double</div>
-                    <div class="np-element np-hover np-square-xxl np-shadow mx-3">.np-shadow-shadow</div>
-                    <div class="np-element np-hover-inverse np-square-xxl np-shadow-inverse">.np-shadow-inverse</div>
+                    <div class="np-element np-hover np-square-xxl np-shadow-double"></div>
+                    <div class="np-element np-hover np-square-xxl np-shadow mx-3"></div>
+                    <div class="np-element np-hover-inverse np-square-xxl np-shadow-inverse"></div>
                 </div>
             </div>
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;div class="np-element np-hover np-square-xxl np-shadow-double"&#62;&#60;/div&#62;
+    &#60;div class="np-element np-hover np-square-xxl np-shadow mx-3"&#62;&#60;/div&#62;
+    &#60;div class="np-element np-hover-inverse np-square-xxl np-shadow-inverse"&#62;&#60;/div&#62;
+</pre>
 
             <div class="col-12 my-3" id="Lists">
                 <h3 class="np-table-heading">Lists - np-table-heading</h3>
@@ -125,22 +183,32 @@
                     <li class="np-list-element np-bg-accent">.np-bg-accent</li>
                     <li class="np-list-element np-bg-warn">.np-bg-warn</li>
                     <li class="np-list-element np-bg-light">.np-bg-light</li>
-                    <li class="np-list-element np-bg-foreground">.np-bg-foreground</li>
+                    <li class="np-list-element np-bg-foreground np-text-light">.np-bg-foreground</li>
                 </ul>
             </div>
             
             <div class="col-12 col-md-6 my-3" id="Hover">
                 <h3 class="np-table-heading">Hover</h3>
-                <ul class="np-list">
-                    <li class="np-element np-hover">.np-element.np-hover</li>
-                </ul>
+                <p>Integrates an hover neumorphism shadow effect</p>
+                <div class="np-element np-hover">Hover</div>
+                
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;div class="np-element np-hover"&#62;&#60;/div&#62;
+</pre>
             </div>
             
             <div class="col-12 col-md-6 my-3">
                 <h3 class="np-table-heading">Hover inverse</h3>
-                <ul class="np-list">
-                    <li class="np-element np-shadow-inverse np-hover-inverse">np-element.np-shadow-inverse.np-hover-inverse</li>
-                </ul>
+                <p>Integrates an inverse hover neumorphism shadow effect</p>
+                <div class="np-element np-shadow-inverse np-hover-inverse">Hover inverse</div>
+                
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;div class="np-element np-shadow-inverse np-hover-inverse"&#62;&#60;/d&#62;
+</pre>
             </div>
             
             <div class="col-12 my-3" id="Buttons">
@@ -187,64 +255,124 @@
                 <h3 class="np-table-heading">Forms</h3>
                 <div class="np-form-group">
                     <label for="np-element">Label</label>
-                    <input type="text" class="np-form-element np-text-accent" value=".np-form-group > .np-form-element">
+                    <input type="text" class="np-form-element np-text-accent" value="Value">
                 </div>
                 <div class="np-form-group">
                     <label for="np-element">Label</label>
-                    <input type="text" class="np-form-element np-text-accent" value=".np-form-group > .np-form-element">
+                    <input type="text" class="np-form-element np-text-accent" value="Value">
                 </div>
                 <div class="np-form-group">
                     <label for="np-option">Label</label>
                     <select name="np-option" id="np-option" class="np-form-element">
-                        <option value="1">.np-form-group > .np-form-element</option>
-                        <option value="1">Option element</option>
-                        <option value="1">Option element</option>
-                        <option value="1">Option element</option>
-                        <option value="1">Option element</option>
+                        <option value="1">Value</option>
+                        <option value="1">Value</option>
+                        <option value="1">Value</option>
+                        <option value="1">Value</option>
+                        <option value="1">Value</option>
                     </select>
                 </div>
                 <div class="np-form-group">
                     <input type="text" class="np-form-element" placeholder="Placeholder">
                     <input type="text" class="np-form-element" placeholder="Placeholder">
                 </div>
+
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;div class="np-form-group"&#62;
+        &#60;label for="np-element"&#62;Label&#60;/label&#62;
+        &#60;input type="text" class="np-form-element np-text-accent" value=".np-form-group &#62; .np-form-element"&#62;
+    &#60;/div&#62;
+    &#60;div class="np-form-group"&#62;
+        &#60;label for="np-element"&#62;Label&#60;/label&#62;
+        &#60;input type="text" class="np-form-element np-text-accent" value=".np-form-group &#62; .np-form-element"&#62;
+    &#60;/div&#62;
+    &#60;div class="np-form-group"&#62;
+        &#60;label for="np-option"&#62;Label&#60;/label&#62;
+        &#60;select name="np-option" id="np-option" class="np-form-element"&#62;
+            &#60;option value="1"&#62;.np-form-group &#62; .np-form-element&#60;/option&#62;
+            &#60;option value="1"&#62;Option element&#60;/option&#62;
+            &#60;option value="1"&#62;Option element&#60;/option&#62;
+            &#60;option value="1"&#62;Option element&#60;/option&#62;
+            &#60;option value="1"&#62;Option element&#60;/option&#62;
+        &#60;/select&#62;
+    &#60;/div&#62;
+    &#60;div class="np-form-group"&#62;
+        &#60;input type="text" class="np-form-element" placeholder="Placeholder"&#62;
+        &#60;input type="text" class="np-form-element" placeholder="Placeholder"&#62;
+    &#60;/div&#62;
+</pre>
+
+
             </div>
 
             <div class="col-12 mt-3" id="Tables">
                 <h3 class="np-table-heading">Tables</h3>
             </div>
             <div class="col-12">
-                <table class="np-table">
+                <table class="np-table np-0-8x">
                     <tr class="np-table-heading">
-                        <th>np-table > np-table-heading</th>
+                        <th>Heading</th>
                         <th>Heading</th>
                         <th>Heading</th>
                         <th>Heading</th>
                     </tr>
                     <tr class="np-table-row">
-                        <td>np-table > .np-table-row</td>
                         <td>row</td>
-                        <td>row</td>
-                        <td>row</td>
-                    </tr>
-                    <tr class="np-table-row">
-                        <td>np-table > .np-table-row</td>
                         <td>row</td>
                         <td>row</td>
                         <td>row</td>
                     </tr>
                     <tr class="np-table-row">
-                        <td>np-table > .np-table-row</td>
+                        <td>row</td>
+                        <td>row</td>
+                        <td>row</td>
+                        <td>row</td>
+                    </tr>
+                    <tr class="np-table-row">
+                        <td>row</td>
                         <td>row</td>
                         <td>row</td>
                         <td>row</td>
                     </tr>
                 </table>
+
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;table class="np-table np-0-8x"&#62;
+        &#60;tr class="np-table-heading"&#62;
+            &#60;th&#62;Heading&#60;/th&#62;
+            &#60;th&#62;Heading&#60;/th&#62;
+            &#60;th&#62;Heading&#60;/th&#62;
+            &#60;th&#62;Heading&#60;/th&#62;
+        &#60;/tr&#62;
+        &#60;tr class="np-table-row"&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+        &#60;/tr&#62;
+        &#60;tr class="np-table-row"&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+        &#60;/tr&#62;
+        &#60;tr class="np-table-row"&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+            &#60;td&#62;row&#60;/td&#62;
+        &#60;/tr&#62;
+    &#60;/table&#62;
+</pre>
             </div>
 
 
             <div class="col-12 mt-3" id="Images">
                 <h3 class="np-table-heading">Images</h3>
-                <span>.np-img-wrapper > np-img-expand</span>
+                <p>Centers the image in wrapper and scales to the full of its height.</p>
             </div>
             <div class="col-12 col-md-5 np-img-wrapper mb-3 mb-md-5 mr-auto mr-md-none mt-3">
                 <img src="https://picsum.photos/600/300?grayscale" class="np-img-expand" alt="https://picsum.photos/seed/picsum/200/300">
@@ -252,25 +380,38 @@
             <div class="col-12 col-md-5 np-img-wrapper mb-3 mb-md-5 np-element">
                 <img src="https://picsum.photos/600/300?grayscale" class="np-img-expand" alt="https://picsum.photos/seed/picsum/200/300">
             </div>
+
+            <div class="col-12">
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;div class="np-img-wrapper"&#62;	
+        &#60;img src="https://picsum.photos/600/300?grayscale" class="np-img-expand"&#62;	
+    &#60;/div&#62;	
+</pre>
+            </div>
             
-            <div class="col-12 my-3" id="Sizing">
+            <div class="col-12 col-md-6 my-3" id="Sizing">
                 <h3 class="np-table-heading">Sizing</h3>
                 <strong>Using font-size</strong>
+                <p>Can easily increase font size with "x" clases</p>
                 <ul class="np-list">
                     <li class="np-list-element np-0-5x">np-0-5x</li>
+                    <li class="np-list-element np-1-8x">np-1-8x</li>
                     <li class="np-list-element np-1-5x">np-1-5x</li>
                     <li class="np-list-element np-2x">np-2x</li>
                     <li class="np-list-element np-2-5x">np-2-5x</li>
                     <li class="np-list-element np-3x">np-3x</li>
                 </ul>
             </div>
-            <div class="col-12 my-3">
+            <div class="col-12 col-md-6 my-3">
                 <h3 class="np-table-heading">Sizing tranform</h3>
                 <strong>Using transform</strong>
                 <p>Can use transform same way with "tx" clases</p>
                 
                 <ul class="np-list">
                     <li class="np-list-element">np-0-5tx</li>
+                    <li class="np-list-element">np-0-8tx</li>
                     <li class="np-list-element">np-1-5tx</li>
                     <li class="np-list-element">np-2tx</li>
                     <li class="np-list-element">np-2-5tx5x</li>
@@ -283,7 +424,7 @@
     </div>
 
     <div class="col-12 np-element text-right">
-        Neumorph.scss By: <a href="https://tempuscode.com">Chema Alfonso</a>
+        <small>Neumorph.scss By: <a target="_blank" href="https://tempuscode.com">Chema Alfonso</a></small>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
