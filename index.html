@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Author" content="Chema Alfonso">
     <title>Neumorph.scss</title>
-    <link rel="stylesheet" href="./dist/css/neumorph-full.min.css">
+    <link id="cssLink" rel="stylesheet" href="./dist/css/dark/neumorph-full-dark.min.css">
 </head>
 <body>
 
@@ -66,7 +66,14 @@
         <div class="row">
 
             <div class="col-12 col-md-6 offset-md-3 mt-5 pt-5">
-                <h1 class="np-element text-center">Neumorph.scss</h1>
+                <div class="row">
+                    <div class="col-10">
+                        <h1 class="np-element text-center">Neumorph.scss</h1>
+                    </div>
+                    <div class="col-2">
+                        <button class="np-btn np-square-sm" id="themeToggler">🎨</button>
+                    </div>
+                </div>
             </div>
 
             <div class="col-12 my-4">
@@ -143,7 +150,6 @@
                     <div class="np-element np-hover np-square-xxl np-shadow mx-3"></div>
                     <div class="np-element np-hover-inverse np-square-xxl np-shadow-inverse"></div>
                 </div>
-            </div>
 <pre class="np-element mt-3">
     <span class="np-text-primary">Example:</span>
 
@@ -151,16 +157,29 @@
     &#60;div class="np-element np-hover np-square-xxl np-shadow mx-3"&#62;&#60;/div&#62;
     &#60;div class="np-element np-hover-inverse np-square-xxl np-shadow-inverse"&#62;&#60;/div&#62;
 </pre>
+            </div>
 
             <div class="col-12 my-3" id="Lists">
-                <h3 class="np-table-heading">Lists - np-table-heading</h3>
+                <h3 class="np-table-heading">Lists</h3>
                 <ul class="np-list">
-                    <li class="np-list-element">.np-list > .np-list-element</li>
-                    <li class="np-list-element">.np-list > .np-list-element</li>
-                    <li class="np-list-element">.np-list > .np-list-element</li>
-                    <li class="np-list-element">.np-list > .np-list-element</li>
-                    <li class="np-list-element">.np-list > .np-list-element</li>
+                    <li class="np-list-element">List element</li>
+                    <li class="np-list-element">List element</li>
+                    <li class="np-list-element">List element</li>
+                    <li class="np-list-element">List element</li>
+                    <li class="np-list-element">List element</li>
                 </ul>
+                             
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;ul class="np-list">
+        &#60;li class="np-list-element"&#62;List element&#60;/li&#62;
+        &#60;li class="np-list-element"&#62;List element&#60;/li&#62;
+        &#60;li class="np-list-element"&#62;List element&#60;/li&#62;
+        &#60;li class="np-list-element"&#62;List element&#60;/li&#62;
+        &#60;li class="np-list-element"&#62;List element&#60;/li&#62;
+    &#60;/ul&#62;
+</pre>
             </div>
             
             <div class="col-12 col-md-6 my-3" id="Colors">
@@ -178,10 +197,10 @@
             <div class="col-12 col-md-6 my-3" id="Backgrounds">
                 <h3 class="np-table-heading">Backgrounds</h3>
                 <ul class="np-list">
-                    <li class="np-list-element np-bg-primary">.np-bg-primary</li>
-                    <li class="np-list-element np-bg-success">.np-bg-success</li>
-                    <li class="np-list-element np-bg-accent">.np-bg-accent</li>
-                    <li class="np-list-element np-bg-warn">.np-bg-warn</li>
+                    <li class="np-list-element np-bg-primary np-text-light">.np-bg-primary</li>
+                    <li class="np-list-element np-bg-success np-text-light">.np-bg-success</li>
+                    <li class="np-list-element np-bg-accent np-text-light">.np-bg-accent</li>
+                    <li class="np-list-element np-bg-warn np-text-light">.np-bg-warn</li>
                     <li class="np-list-element np-bg-light">.np-bg-light</li>
                     <li class="np-list-element np-bg-foreground np-text-light">.np-bg-foreground</li>
                 </ul>
@@ -207,13 +226,26 @@
 <pre class="np-element mt-3">
     <span class="np-text-primary">Example:</span>
 
-    &#60;div class="np-element np-shadow-inverse np-hover-inverse"&#62;&#60;/d&#62;
+    &#60;div class="np-element np-shadow-inverse np-hover-inverse"&#62;&#60;/div&#62;
 </pre>
             </div>
             
             <div class="col-12 my-3" id="Buttons">
                 <h3 class="np-table-heading">Buttons</h3>
-                <button class="np-btn">np-btn</button>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-around">
+                        <button class="np-btn">+</button>
+                        <button class="np-btn np-square-sm">+</button>
+                        <button class="np-btn np-circle-sm">+</button>
+                    </div>
+                </div>
+<pre class="np-element mt-3">
+    <span class="np-text-primary">Example:</span>
+
+    &#60;button class="np-btn"&#62;+&#60;/button&#62;
+    &#60;button class="np-btn np-square-sm"&#62;+&#60;/button&#62;
+    &#60;button class="np-btn np-circle-sm"&#62;+&#60;/button&#62;
+</pre>
             </div>
             
             <div class="col-12 col-md-6 my-3" id="Divider">
@@ -233,22 +265,22 @@
             </div>
 
             <div class="col-12 my-3 d-flex flex-wrap justify-content-center align-items-center">
-                <button class="np-element np-hover np-square-sm">sm</button>
-                <button class="np-element np-hover np-square-md">md</button>
-                <button class="np-element np-hover np-square-lg">np-square-lg</button>
-                <button class="np-element np-hover np-square-xl">np-square-xl</button>
-                <button class="np-element np-hover np-square-xxl">np-square-xxl</button>
+                <button class="np-element np-hover np-square-sm mr-3 mb-3">sm</button>
+                <button class="np-element np-hover np-square-md mr-3 mb-3">md</button>
+                <button class="np-element np-hover np-square-lg mr-3 mb-3">np-square-lg</button>
+                <button class="np-element np-hover np-square-xl mr-3 mb-3">np-square-xl</button>
+                <button class="np-element np-hover np-square-xxl mr-3 mb-3">np-square-xxl</button>
             </div>
 
             <div class="col-12">
                 <h5 class="np-table-heading">Circles</h5>
             </div>
             <div class="col-12 d-flex flex-wrap justify-content-center align-items-center">
-                <button class="np-element np-hover np-circle-sm">sm</button>
-                <button class="np-element np-hover np-circle-md">md</button>
-                <button class="np-element np-hover np-circle-lg">np-circle-lg</button>
-                <button class="np-element np-hover np-circle-xl">np-circle-xl</button>
-                <button class="np-element np-hover np-circle-xxl">np-circle-xxl</button>
+                <button class="np-element np-hover np-circle-sm mr-3 mb-3">sm</button>
+                <button class="np-element np-hover np-circle-md mr-3 mb-3">md</button>
+                <button class="np-element np-hover np-circle-lg mr-3 mb-3">np-circle-lg</button>
+                <button class="np-element np-hover np-circle-xl mr-3 mb-3">np-circle-xl</button>
+                <button class="np-element np-hover np-circle-xxl mr-3 mb-3">np-circle-xxl</button>
             </div>
 
             <div class="col-12 my-3" id="Forms">
@@ -386,7 +418,7 @@
     <span class="np-text-primary">Example:</span>
 
     &#60;div class="np-img-wrapper"&#62;	
-        &#60;img src="https://picsum.photos/600/300?grayscale" class="np-img-expand"&#62;	
+        &#60;img class="np-img-expand" src="https://picsum.photos/600/300?grayscale"&#62;	
     &#60;/div&#62;	
 </pre>
             </div>
@@ -427,7 +459,21 @@
         <small>Neumorph.scss By: <a target="_blank" href="https://tempuscode.com">Chema Alfonso</a></small>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script>
+        ( () => {
+            const cssLink = document.getElementById('cssLink');
+            const themeToggler = document.getElementById('themeToggler');
+            themeToggler.addEventListener('click', () => {
+                if( cssLink.href.includes('dark') ){
+                    cssLink.setAttribute('href', './dist/css/light/neumorph-full.min.css'); 
+                } else {
+                    cssLink.setAttribute('href', './dist/css/dark/neumorph-full-dark.min.css'); 
+                }
+            });
+        })();
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     

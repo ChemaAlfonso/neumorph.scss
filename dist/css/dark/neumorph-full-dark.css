@@ -9887,7 +9887,10 @@ h3 {
  Import theming vars
 =====================================*/
 /*========================
- Vars
+ Light theme
+========================*/
+/*========================
+ Night theme
 ========================*/
 /*========================
  Mixings
@@ -9897,12 +9900,12 @@ h3 {
 ========================*/
 ::-webkit-scrollbar {
   width: 3px;
-  background: #f2f3f7;
+  background: #383838;
 }
 
 ::-webkit-scrollbar-thumb {
   width: 3px;
-  background: #75a1e5;
+  background: #75bce5;
 }
 
 /*========================
@@ -9928,12 +9931,12 @@ button.np-btn:focus,
 .np-circle-xl:focus,
 .np-circle-xxl:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 
 .np-shadow-inverse:focus {
   outline: none;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
 }
 
 /*========================
@@ -9947,8 +9950,8 @@ button.np-btn:focus,
 
 html,
 body {
-  background: #f2f3f7;
-  color: #75a1e5;
+  background: #383838;
+  color: #75bce5;
   font-family: "Roboto", sans-serif !important;
   font-weight: 200;
   font-style: normal;
@@ -9958,34 +9961,34 @@ body {
  Anchors general
 ========================*/
 a {
-  color: #75a1e5;
+  color: #75bce5;
   text-decoration: none;
 }
 a:hover {
-  color: #e28ae8;
+  color: #eba3a3;
   text-decoration: none;
 }
 a.selected {
-  color: #e28ae8;
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  color: #eba3a3;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 a.active {
-  color: #e28ae8;
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  color: #eba3a3;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 a.dropdown-item {
-  background: #f2f3f7;
-  color: #75a1e5;
+  background: #383838;
+  color: #75bce5;
   padding-top: 0;
   transition: all 0.3s;
 }
 a.dropdown-item:hover {
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
-  color: #e28ae8;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
+  color: #eba3a3;
 }
 a.dropdown-item:active {
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
-  color: #e28ae8;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
+  color: #eba3a3;
   background: transparent;
 }
 
@@ -9993,8 +9996,8 @@ a.dropdown-item:active {
  Divs general
 ========================*/
 div.dropdown-menu {
-  background: #f2f3f7;
-  color: #75a1e5;
+  background: #383838;
+  color: #75bce5;
 }
 
 /*========================
@@ -10033,66 +10036,68 @@ div.dropdown-menu {
   ========================*/
 }
 .np-element {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.2);
 }
 .np-colorize {
-  background: #f2f3f7;
-  color: #75a1e5;
+  background: #383838;
+  color: #75bce5;
 }
 .np-colorize-inverse {
-  background: #75a1e5;
-  color: #f2f3f7;
+  background: #75bce5;
+  color: #383838;
 }
 .np-shadow {
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
 }
 .np-shadow-inverse {
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 .np-shadow-double {
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 .np-hover {
   transition: all 0.3s;
 }
 .np-hover:hover {
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 .np-hover-inverse {
   transition: all 0.3s;
 }
 .np-hover-inverse:hover {
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
 }
 .np-btn {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.2);
   border: none;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 4px;
   line-height: 1.8rem;
   padding: 0.4rem;
   cursor: pointer;
 }
 .np-btn:hover {
-  box-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
+  color: #eba3a3;
+}
+.np-btn:focus {
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
+  color: #eba3a3;
 }
 .np-divider {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   display: block;
   width: 100%;
   height: 3px;
@@ -10100,9 +10105,9 @@ div.dropdown-menu {
   float: none;
 }
 .np-divider-fat {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   display: block;
   width: 100%;
   height: 8px;
@@ -10170,46 +10175,46 @@ div.dropdown-menu {
   padding-left: 0;
 }
 .np-list-element {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.2);
   height: 100%;
   padding-left: 1rem;
   line-height: 2rem;
   margin-bottom: 0.4rem;
 }
 .np-form-group {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.2);
   display: flex;
   flex-direction: column;
   margin-bottom: 0.3rem;
 }
 .np-form-element {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.2);
   padding: 0.6rem 0.5rem;
-  color: #e28ae8;
+  color: #eba3a3;
   margin-bottom: 0.3rem;
 }
 .np-table {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.2);
   width: 100%;
 }
 .np-table-heading {
@@ -10217,12 +10222,12 @@ div.dropdown-menu {
   padding-top: 0.8rem;
 }
 .np-table-row {
-  background: #f2f3f7;
-  color: #75a1e5;
-  box-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  border: none;
+  border: 1px solid rgba(65, 65, 65, 0.2);
   height: 100%;
   min-height: 6.5vh;
   padding-top: 0.4rem;
@@ -10264,19 +10269,19 @@ div.dropdown-menu {
   transform: scale(2);
 }
 .np-text-shadow {
-  text-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  text-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
 }
 .np-text-shadow-inverse {
-  text-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  text-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 .np-text-primary {
-  color: #7577e5;
+  color: #7476e6;
 }
 .np-text-success {
   color: #afe88a;
 }
 .np-text-accent {
-  color: #e28ae8;
+  color: #eba3a3;
 }
 .np-text-warn {
   color: #e88a8a;
@@ -10285,22 +10290,22 @@ div.dropdown-menu {
   color: white;
 }
 .np-text-foreground {
-  color: #75a1e5;
+  color: #75bce5;
 }
 .np-bg-shadow {
-  text-shadow: 2px 2px 6px 0px #dde4ef, -2px -2px 6px 0px white, inset 0px 0px 0px 0px #dde4ef, inset 0px 0px 0px 0px white;
+  text-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.8), -6px -6px 16px 0px rgba(65, 65, 65, 0.8), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.8), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.8);
 }
 .np-bg-shadow-inverse {
-  text-shadow: 0px 0px 0px 0px #dde4ef, 0px 0px 0px 0px white, inset 2px 2px 6px 0px #dde4ef, inset -2px -2px 6px 0px white;
+  text-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.8), 0px 0px 0px 0px rgba(65, 65, 65, 0.8), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.8), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.8);
 }
 .np-bg-primary {
-  background: #7577e5;
+  background: #7476e6;
 }
 .np-bg-success {
   background: #afe88a;
 }
 .np-bg-accent {
-  background: #e28ae8;
+  background: #eba3a3;
 }
 .np-bg-warn {
   background: #e88a8a;
@@ -10309,7 +10314,7 @@ div.dropdown-menu {
   background: white;
 }
 .np-bg-foreground {
-  background: #75a1e5;
+  background: #75bce5;
 }
 .np-img-wrapper {
   display: flex;
@@ -10324,4 +10329,4 @@ div.dropdown-menu {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=neumorph-full.css.map */
+/*# sourceMappingURL=neumorph-full-dark.css.map */

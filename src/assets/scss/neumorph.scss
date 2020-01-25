@@ -7,7 +7,7 @@
 /*====================================
  Import theming vars
 =====================================*/
-@import '../bootstrap/scss/bootstrap.scss';
+// @import '../bootstrap/scss/bootstrap.scss';
 // @import '../bootstrap/scss/bootstrap-grid.scss';
 
 /*====================================
@@ -29,23 +29,23 @@
 }
 
 @mixin np-shadow {
-    box-shadow: 2px 2px 6px 0px $shadow, -2px -2px 6px 0px $light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $light;
+    box-shadow: 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), inset  0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8);
 }
 
 @mixin np-shadow-inverse {
-    box-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $light, inset 2px 2px 6px 0px $shadow, inset  -2px -2px 6px 0px $light;
+    box-shadow: 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), 0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), inset  -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8);
 }
 
 @mixin np-shadow-double {
-    box-shadow: 2px 2px 6px 0px $shadow, -2px -2px 6px 0px $light, inset 2px 2px 6px 0px $shadow, inset  -2px -2px 6px 0px $light;
+    box-shadow: 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), inset  -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8);
 }
 
 @mixin np-text-shadow {
-    text-shadow: 2px 2px 6px 0px $shadow, -2px -2px 6px 0px $light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $light;
+    text-shadow: 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), inset  0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8);
 }
 
 @mixin np-text-shadow-inverse {
-    text-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $light, inset 2px 2px 6px 0px $shadow, inset  -2px -2px 6px 0px $light;
+    text-shadow: 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), 0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), inset  -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8);
 }
 
 @mixin basic-element {
@@ -53,7 +53,8 @@
     @include np-shadow;
     border-radius: 4px;
     padding: .4rem 1rem;
-    border: none;
+    // border: none;
+    border: 1px solid rgba($color: $shadow-light, $alpha: 0.2);
 }
 
 /*========================
@@ -210,9 +211,6 @@ div{
         @include basic-element; 
         border: none; 
         transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: 4px;
         line-height: 1.8rem;
         padding: .4rem;
@@ -220,6 +218,11 @@ div{
 
         &:hover{ 
             @include np-shadow-inverse;  
+            color: $accent;
+        }
+        &:focus{ 
+            @include np-shadow-inverse;  
+            color: $accent;
         }
     }
 
