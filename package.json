@@ -7,15 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph.css",
     "sass-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph.min.css --style=compressed",
-    "sass-grid": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph-grid.css",
-    "sass-grid-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph-grid.min.css --style=compressed",
     "sass-full": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph-full.css",
     "sass-full-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph-full.min.css --style=compressed",
     
     "sass-dark": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-dark.css",
     "sass-dark-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-dark.min.css --style=compressed",
-    "sass-dark-grid": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-grid-dark.css",
-    "sass-dark-grid-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-grid-dark.min.css --style=compressed",
     "sass-dark-full": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-full-dark.css",
     "sass-dark-full-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-full-dark.min.css --style=compressed"
   },

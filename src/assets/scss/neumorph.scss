@@ -7,13 +7,18 @@
 /*====================================
  Import Bootstrap
 =====================================*/
-// @import '../bootstrap/scss/bootstrap.scss';
-// @import '../bootstrap/scss/bootstrap-grid.scss';
+@import '../bootstrap/scss/_functions.scss';
 
-/*====================================
- Import theming vars
-=====================================*/
-@import './themes/np-theme.scss';
+// Custom vars
+@import './themes/_variables.scss';
+
+@import '../bootstrap/scss/_mixins.scss';
+@import '../bootstrap/scss/root.scss';
+@import '../bootstrap/scss/_utilities.scss';
+@import '../bootstrap/scss/bootstrap-grid.scss';
+
+// Full bootstrap
+// @import '../bootstrap/scss/bootstrap.scss';
 
 /*========================
  Mixings
@@ -29,32 +34,31 @@
 }
 
 @mixin np-shadow {
-    box-shadow: 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), inset  0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8);
+    box-shadow: 6px 6px 16px 0px $shadow, -6px -6px 16px 0px $shadow-light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $shadow-light;
 }
 
 @mixin np-shadow-inverse {
-    box-shadow: 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), 0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), inset  -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8);
+    box-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $shadow-light, inset 6px 6px 16px 0px $shadow, inset  -6px -6px 16px 0px $shadow-light;
 }
 
 @mixin np-shadow-double {
-    box-shadow: 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), inset  -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8);
+    box-shadow: 6px 6px 16px 0px $shadow, -6px -6px 16px 0px $shadow-light, inset 6px 6px 16px 0px $shadow, inset  -6px -6px 16px 0px $shadow-light;
 }
 
 @mixin np-text-shadow {
-    text-shadow: 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), inset  0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8);
+    text-shadow: 6px 6px 16px 0px $shadow, -6px -6px 16px 0px $shadow-light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $shadow-light;
 }
 
 @mixin np-text-shadow-inverse {
-    text-shadow: 0px 0px 0px 0px rgba($color: $shadow, $alpha: 0.8), 0px 0px 0px 0px rgba($color: $shadow-light, $alpha: 0.8), inset 6px 6px 16px 0px rgba($color: $shadow, $alpha: 0.8), inset  -6px -6px 16px 0px rgba($color: $shadow-light, $alpha: 0.8);
+    text-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $shadow-light, inset 6px 6px 16px 0px $shadow, inset  -6px -6px 16px 0px $shadow-light;
 }
 
 @mixin basic-element {
     @include np-colorize; 
     @include np-shadow;
-    border-radius: 4px;
+    border-radius: $radius;
     padding: .4rem 1rem;
-    // border: none;
-    border: 1px solid rgba($color: $shadow-light, $alpha: 0.2);
+    border: 1px solid $shadow-light;
 }
 
 /*========================
@@ -100,6 +104,7 @@ button.np-btn:focus,
     @include np-shadow; 
 }
 
+
 /*========================
  General
 ========================*/
@@ -139,7 +144,7 @@ a{
     &.dropdown-item{
         @include np-colorize();
         padding-top: 0;
-        transition: all .3s;
+        transition: all $transition-time;
         &:hover{
             @include np-shadow-inverse;
             color: $accent;
@@ -177,6 +182,11 @@ div{
     ==================*/
     &-element{     
         @include basic-element; 
+        transition: all $transition-time;
+        &::after,
+        &::before{
+            transition: all $transition-time;
+        }
     }
     
     &-colorize{     
@@ -194,17 +204,101 @@ div{
         &-double{      
             @include np-shadow-double(); 
         }
+        &-border-square{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+            }
+        }
+        &-border-circle{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+                border-radius: 50%;
+            }
+        }
+        &-border-square-push{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+            }
+
+            &:hover{
+                &::before{
+                    @include np-shadow();
+                }
+            }
+        }
+        &-border-circle-push{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+                border-radius: 50%;
+            }
+
+            &:hover{
+                &::before{
+                    @include np-shadow();
+                }
+            }
+        }
     }
     
     &-hover{ 
-        transition: all .3s;
         &:hover{ 
             @include np-shadow-inverse;  
         } 
     }
      
     &-hover-inverse{ 
-        transition: all .3s;
         &:hover{ 
             @include np-shadow;  
         } 
@@ -216,8 +310,8 @@ div{
     &-btn{ 
         @include basic-element; 
         border: none; 
-        transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
-        border-radius: 4px;
+        transition: all $transition-time cubic-bezier(0.23, 1, 0.320, 1);
+        border-radius: $radius;
         line-height: 1.8rem;
         padding: .4rem;
         cursor: pointer;
@@ -241,9 +335,10 @@ div{
         @include np-shadow; 
         display: block;
         width: 100%;
-        height: 3px;
+        height: 5px;
         margin: .8em auto;
         float: none;
+        border-radius: $radius;
 
         &-fat{
             @include np-colorize; 
@@ -253,35 +348,35 @@ div{
             height: 8px;
             margin: .8em auto;
             float: none;
-            border-radius: 4px;
+            border-radius: $radius;
         }
     }
 
     &-square{ 
 
         &-sm{
-            width: 6.5vh;
-            height: 6.5vh;
+            width: $size-sm;
+            height: $size-sm;
             overflow: hidden;
         }
         &-md{
-            width: 10.5vh;
-            height: 10.5vh;
+            width: $size-md;
+            height: $size-md;
             overflow: hidden;
         }
         &-lg{
-            width: 15.5vh;
-            height: 15.5vh;
+            width: $size-lg;
+            height: $size-lg;
             overflow: hidden;
         }
         &-xl{
-            width: 20vh;
-            height: 20vh;
+            width: $size-xl;
+            height: $size-xl;
             overflow: hidden;
         }
         &-xxl{
-            width: 26vh;
-            height: 26vh;
+            width: $size-xxl;
+            height: $size-xxl;
             overflow: hidden;
         }
     }
@@ -289,32 +384,32 @@ div{
     &-circle{ 
 
         &-sm{
-            width: 6.5vh;
-            height: 6.5vh;
+            width: $size-sm;
+            height: $size-sm;
             overflow: hidden;
             border-radius: 50%;
         }
         &-md{
-            width: 10.5vh;
-            height: 10.5vh;
+            width: $size-md;
+            height: $size-md;
             overflow: hidden;
             border-radius: 50%;
         }
         &-lg{
-            width: 15.5vh;
-            height: 15.5vh;
+            width: $size-lg;
+            height: $size-lg;
             overflow: hidden;
             border-radius: 50%;
         }
         &-xl{
-            width: 20vh;
-            height: 20vh;
+            width: $size-xl;
+            height: $size-xl;
             overflow: hidden;
             border-radius: 50%;
         }
         &-xxl{
-            width: 26vh;
-            height: 26vh;
+            width: $size-xxl;
+            height: $size-xxl;
             overflow: hidden;
             border-radius: 50%;
         }
