@@ -16,7 +16,7 @@ You only need to **import one of the variations** stylesheets on your proyect an
 ## Variations
 You can use **Neumorph.scss standalone** too.
 
-Check **Dark and Light** themes and choose what you need, Neumorph.scss only, with full bootstrap styles or with bootstrap _utilities & grid only.
+Check **Dark and Light** themes and choose what you need, Neumorph.scss with bootstrap _utilities & grid only or with full bootstrap styles.
 
 ### Light themed
 * neumorph.css
