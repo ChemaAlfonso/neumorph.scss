@@ -40,6 +40,8 @@ $secondary:     $secondary !default;
  Np Sizes
 =====================================*/
 $radius: 5px;
+$text-decrease: calc( 1rem * .995);
+$text-increase: calc( 1rem * 1.1);
 
 $size-sm: 6vh;
 $size-md: 10vh;

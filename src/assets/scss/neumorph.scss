@@ -61,6 +61,14 @@
     border: 1px solid $shadow-light;
 }
 
+@mixin basic-element-inverse {
+    @include np-colorize; 
+    @include np-shadow-inverse;
+    border-radius: $radius;
+    padding: .4rem 1rem;
+    border: 1px solid $shadow-light;
+}
+
 /*========================
  Scroll
 ========================*/
@@ -99,11 +107,13 @@ button.np-btn:focus,
 .np-circle-xxl:focus {
     outline: none;
     @include np-shadow-inverse; 
+    font-size: $text-decrease;
 }
 
 .np-shadow-inverse:focus {
     outline: none;
     @include np-shadow; 
+    font-size: $text-increase;
 }
 
 
@@ -123,6 +133,7 @@ body{
     font-family: 'Roboto', sans-serif !important;
     font-weight: 200;
     font-style: normal;
+    font-size: 1.1rem;
 }
 
 /*========================
@@ -184,6 +195,16 @@ div{
     ==================*/
     &-element{     
         @include basic-element; 
+        transition: all $transition-time;
+        &::after,
+        &::before{
+            transition: all $transition-time;
+        }
+    }
+
+    &-element-inverse{   
+        @include basic-element-inverse; 
+        font-size: $text-decrease;  
         transition: all $transition-time;
         &::after,
         &::before{
@@ -295,14 +316,17 @@ div{
     }
     
     &-hover{ 
+        transition: all $transition-time;
         &:hover{ 
             @include np-shadow-inverse;  
+            font-size: $text-decrease;
         } 
     }
      
     &-hover-inverse{ 
         &:hover{ 
             @include np-shadow;  
+            font-size: $text-increase; 
         } 
     }
 
@@ -320,10 +344,12 @@ div{
 
         &:hover{ 
             @include np-shadow-inverse;  
+            font-size: $text-decrease;
             color: $accent;
         }
         &:focus{ 
             @include np-shadow-inverse;  
+            font-size: $text-decrease; 
             color: $accent;
         }
     }
