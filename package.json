@@ -12,7 +12,7 @@
     
     "sass-dark": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-dark.css",
     "sass-dark-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-dark.min.css --style=compressed",
-    "sass-dark-full": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-full-dark.css --watch",
+    "sass-dark-full": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-full-dark.css",
     "sass-dark-full-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-full-dark.min.css --style=compressed",
 
     "sass-custom": "sass ./src/assets/scss/neumorph.scss ./dist/css/custom/neumorph-custom.css",

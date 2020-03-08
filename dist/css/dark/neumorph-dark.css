@@ -1,5 +1,5 @@
 /*!
- * Neumorph.scss v4.4.1 (https://tempuscode.com/)
+ * Neumorph.scss v4.4.1 (https://chemaalfonso.com/)
  * Copyright 2020 Chema Alfonso
  * Licensed under MIT (https://github.com/ChemaAlfonso/neumorph.scss/blob/master/LICENSE)
  */
@@ -8207,13 +8207,15 @@ html {
  Scroll
 ========================*/
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 0.5%;
+  height: 0.5%;
   background: #383838;
 }
 
 ::-webkit-scrollbar-thumb {
   width: 3px;
   background: #75bce5;
+  border-radius: 5px;
 }
 
 /*========================
@@ -8240,11 +8242,13 @@ button.np-btn:focus,
 .np-circle-xxl:focus {
   outline: none;
   box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.801), 0px 0px 0px 0px rgba(65, 65, 65, 0.801), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.801), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.801);
+  font-size: calc( 1rem * .995);
 }
 
 .np-shadow-inverse:focus {
   outline: none;
   box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.801), -6px -6px 16px 0px rgba(65, 65, 65, 0.801), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.801), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.801);
+  font-size: calc( 1rem * 1.1);
 }
 
 /*========================
@@ -8263,6 +8267,7 @@ body {
   font-family: "Roboto", sans-serif !important;
   font-weight: 200;
   font-style: normal;
+  font-size: 1.1rem;
 }
 
 /*========================
@@ -8359,6 +8364,19 @@ div.dropdown-menu {
   transition: all 0.3s;
 }
 .np-element::after, .np-element::before {
+  transition: all 0.3s;
+}
+.np-element-inverse {
+  background: #383838;
+  color: #75bce5;
+  box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.801), 0px 0px 0px 0px rgba(65, 65, 65, 0.801), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.801), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.801);
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(65, 65, 65, 0.801);
+  font-size: calc( 1rem * .995);
+  transition: all 0.3s;
+}
+.np-element-inverse::after, .np-element-inverse::before {
   transition: all 0.3s;
 }
 .np-colorize {
@@ -8458,11 +8476,16 @@ div.dropdown-menu {
 .np-shadow-border-circle-push:hover::before {
   box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.801), -6px -6px 16px 0px rgba(65, 65, 65, 0.801), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.801), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.801);
 }
+.np-hover {
+  transition: all 0.3s;
+}
 .np-hover:hover {
   box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.801), 0px 0px 0px 0px rgba(65, 65, 65, 0.801), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.801), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.801);
+  font-size: calc( 1rem * .995);
 }
 .np-hover-inverse:hover {
   box-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.801), -6px -6px 16px 0px rgba(65, 65, 65, 0.801), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.801), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.801);
+  font-size: calc( 1rem * 1.1);
 }
 .np-btn {
   background: #383838;
@@ -8480,10 +8503,12 @@ div.dropdown-menu {
 }
 .np-btn:hover {
   box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.801), 0px 0px 0px 0px rgba(65, 65, 65, 0.801), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.801), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.801);
+  font-size: calc( 1rem * .995);
   color: #eba3a3;
 }
 .np-btn:focus {
   box-shadow: 0px 0px 0px 0px rgba(40, 40, 41, 0.801), 0px 0px 0px 0px rgba(65, 65, 65, 0.801), inset 6px 6px 16px 0px rgba(40, 40, 41, 0.801), inset -6px -6px 16px 0px rgba(65, 65, 65, 0.801);
+  font-size: calc( 1rem * .995);
   color: #eba3a3;
 }
 .np-divider {
@@ -8679,11 +8704,26 @@ div.dropdown-menu {
 .np-text-warn {
   color: #e88a8a;
 }
+.np-text-warning {
+  color: #ffc107;
+}
+.np-text-info {
+  color: #17a2b8;
+}
+.np-text-secondary {
+  color: #6c757d;
+}
+.np-text-dark {
+  color: #343a40;
+}
 .np-text-light {
   color: white;
 }
 .np-text-foreground {
   color: #75bce5;
+}
+.np-text-background {
+  color: #383838;
 }
 .np-bg-shadow {
   text-shadow: 6px 6px 16px 0px rgba(40, 40, 41, 0.801), -6px -6px 16px 0px rgba(65, 65, 65, 0.801), inset 0px 0px 0px 0px rgba(40, 40, 41, 0.801), inset 0px 0px 0px 0px rgba(65, 65, 65, 0.801);
@@ -8703,20 +8743,37 @@ div.dropdown-menu {
 .np-bg-warn {
   background: #e88a8a;
 }
+.np-bg-warning {
+  background: #ffc107;
+}
+.np-bg-info {
+  background: #17a2b8;
+}
+.np-bg-secondary {
+  background: #6c757d;
+}
+.np-bg-dark {
+  background: #343a40;
+}
 .np-bg-light {
   background: white;
 }
 .np-bg-foreground {
   background: #75bce5;
 }
+.np-bg-background {
+  background: #383838;
+}
 .np-img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 0;
 }
 .np-img-expand {
   height: 100%;
+  object-fit: cover;
 }
 .np-pointer {
   cursor: pointer;
