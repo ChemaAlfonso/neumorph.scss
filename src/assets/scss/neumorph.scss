@@ -65,13 +65,14 @@
  Scroll
 ========================*/
 ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
+    width: .5%;
+    height: .5%;
     background: $background;
 }
 ::-webkit-scrollbar-thumb {
     width: 3px;
     background: $foreground;
+    border-radius: $radius;
 }
 
 /*========================
