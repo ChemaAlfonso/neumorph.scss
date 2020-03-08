@@ -1,5 +1,5 @@
 /*!
- * Neumorph.scss v4.4.1 (https://tempuscode.com/)
+ * Neumorph.scss v4.4.1 (https://chemaalfonso.com/)
  * Copyright 2020 Chema Alfonso
  * Licensed under MIT (https://github.com/ChemaAlfonso/neumorph.scss/blob/master/LICENSE)
  */
@@ -18,7 +18,7 @@
 @import '../bootstrap/scss/bootstrap-grid.scss';
 
 // Full bootstrap
-// @import '../bootstrap/scss/bootstrap.scss';
+@import '../bootstrap/scss/bootstrap.scss';
 
 /*========================
  Mixings
@@ -66,6 +66,7 @@
 ========================*/
 ::-webkit-scrollbar {
     width: 3px;
+    height: 3px;
     background: $background;
 }
 ::-webkit-scrollbar-thumb {
@@ -538,11 +539,26 @@ div{
         &-warn{      
             color: $warn; 
         }
+        &-warning{      
+            color: $warning; 
+        }
+        &-info{      
+            color: $info; 
+        }
+        &-secondary{      
+            color: $secondary; 
+        }
+        &-dark{      
+            color: $dark; 
+        }
         &-light{      
             color: $light; 
         }
         &-foreground{      
             color: $foreground; 
+        }
+        &-background{      
+            color: $background; 
         }
     }
 
@@ -569,11 +585,26 @@ div{
         &-warn{      
             background: $warn; 
         }
+        &-warning{      
+            background: $warning; 
+        }
+        &-info{      
+            background: $info; 
+        }
+        &-secondary{      
+            background: $secondary; 
+        }
+        &-dark{      
+            background: $dark; 
+        }
         &-light{      
             background: $light; 
         }
         &-foreground{      
             background: $foreground; 
+        }
+        &-background{      
+            background: $background; 
         }
     }
 
@@ -586,9 +617,11 @@ div{
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            padding: 0;
         }
         &-expand{
             height: 100%;            
+            object-fit: cover;
         }
     }
     

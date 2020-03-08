@@ -5,29 +5,36 @@
 /*========================
  Light theme
 ========================*/
-// $primary:    rgb(117, 119, 229) !default;
-// $success:    rgb(175, 232, 138, 1) !default;
-// $accent:     rgb(226, 138, 232, 1) !default;
-// $warn:       rgb(232, 138, 138, 1) !default;
-// $light:      rgba(255, 255, 255, 1) !default;
-// $foreground: rgba(117, 161, 229, 1) !default;
-// $background: rgba(242,243,247, 1) !default;
-// $shadow:     rgba(221, 228, 239, 1) !default;
+// $primary:      rgb(117, 119, 229) !default;
+// $success:      rgb(175, 232, 138, 1) !default;
+// $accent:       rgb(226, 138, 232, 1) !default;
+// $warn:         rgb(232, 138, 138, 1) !default;
+// $light:        rgba(255, 255, 255, 1) !default;
+// $foreground:   rgba(117, 161, 229, 1) !default;
+// $background:   rgba(242,243,247, 1) !default;
+// $shadow:       rgba(221, 228, 239, 1) !default;
 // $shadow-light: rgba(255, 255, 255, 1) !default;
+// $dark:          $dark !default;
+// $warning:       $warning !default;
+// $info:          $info !default;
+// $secondary:     $secondary !default;
 
 /*========================
  Night theme
 ========================*/
-$primary:    rgb(116, 118, 230) !default;
-$success:    rgb(175, 232, 138, 1) !default;
-$accent:     rgb(235, 163, 163) !default;
-$warn:       rgb(232, 138, 138, 1) !default;
-$light:      rgba(255, 255, 255, 1) !default;
-$foreground: rgb(117, 188, 229) !default;
-$background: #383838 !default;
-$shadow:     rgba(40, 40, 41, 0.801) !default;
+$primary:      rgb(116, 118, 230) !default;
+$success:      rgb(175, 232, 138, 1) !default;
+$accent:       rgb(235, 163, 163) !default;
+$warn:         rgb(232, 138, 138, 1) !default;
+$light:        rgba(255, 255, 255, 1) !default;
+$foreground:   rgb(117, 188, 229) !default;
+$background:   #383838 !default;
+$shadow:       rgba(40, 40, 41, 0.801) !default;
 $shadow-light: rgba(65, 65, 65, 0.801) !default;
-
+$dark:          $dark !default;
+$warning:       $warning !default;
+$info:          $info !default;
+$secondary:     $secondary !default;
 
 /*====================================
  Np Sizes
