@@ -1,0 +1,722 @@
+/*!
+ * Neumorph.scss v4.4.1 (https://chemaalfonso.com/)
+ * Copyright 2020 Chema Alfonso
+ * Licensed under MIT (https://github.com/ChemaAlfonso/neumorph.scss/blob/master/LICENSE)
+ */
+  
+/*====================================
+ Import Bootstrap
+=====================================*/
+@import '../bootstrap/scss/_functions.scss';
+
+// Custom vars
+@import './themes/_variables.scss';
+
+@import '../bootstrap/scss/_mixins.scss';
+@import '../bootstrap/scss/root.scss';
+@import '../bootstrap/scss/_utilities.scss';
+@import '../bootstrap/scss/bootstrap-grid.scss';
+
+// Full bootstrap
+@import '../bootstrap/scss/bootstrap.scss';
+
+/*========================
+ Mixings
+========================*/
+@mixin np-colorize {
+    background: $background;
+    color: $foreground; 
+}
+
+@mixin np-colorize-inverse {
+    background: $foreground;
+    color: $background; 
+}
+
+@mixin np-shadow {
+    box-shadow: 6px 6px 16px 0px $shadow, -6px -6px 16px 0px $shadow-light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $shadow-light;
+}
+
+@mixin np-shadow-inverse {
+    box-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $shadow-light, inset 6px 6px 16px 0px $shadow, inset  -6px -6px 16px 0px $shadow-light;
+}
+
+@mixin np-shadow-double {
+    box-shadow: 6px 6px 16px 0px $shadow, -6px -6px 16px 0px $shadow-light, inset 6px 6px 16px 0px $shadow, inset  -6px -6px 16px 0px $shadow-light;
+}
+
+@mixin np-text-shadow {
+    text-shadow: 6px 6px 16px 0px $shadow, -6px -6px 16px 0px $shadow-light, inset 0px 0px 0px 0px $shadow, inset  0px 0px 0px 0px $shadow-light;
+}
+
+@mixin np-text-shadow-inverse {
+    text-shadow: 0px 0px 0px 0px $shadow, 0px 0px 0px 0px $shadow-light, inset 6px 6px 16px 0px $shadow, inset  -6px -6px 16px 0px $shadow-light;
+}
+
+@mixin basic-element {
+    @include np-colorize; 
+    @include np-shadow;
+    border-radius: $radius;
+    padding: .4rem 1rem;
+    border: 1px solid $shadow-light;
+}
+
+@mixin basic-element-inverse {
+    @include np-colorize; 
+    @include np-shadow-inverse;
+    border-radius: $radius;
+    padding: .4rem 1rem;
+    border: 1px solid $shadow-light;
+}
+
+/*========================
+ Scroll
+========================*/
+::-webkit-scrollbar {
+    width: .5%;
+    height: .5%;
+    background: $background;
+}
+::-webkit-scrollbar-thumb {
+    width: 3px;
+    background: $foreground;
+    border-radius: $radius;
+}
+
+/*========================
+    Focus
+========================*/
+input.np-element:focus,
+select.np-element:focus,
+textarea.np-element:focus,
+textarea.np-form-element:focus,
+input.np-form-element:focus,
+select.np-form-element:focus,
+button.np-btn:focus,
+.np-btn:focus,
+.np-form-element:focus,
+.np-square-sm:focus,
+.np-square-md:focus,
+.np-square-lg:focus,
+.np-square-xl:focus,
+.np-square-xxl:focus,
+.np-circle-sm:focus,
+.np-circle-md:focus,
+.np-circle-lg:focus,
+.np-circle-xl:focus,
+.np-circle-xxl:focus {
+    outline: none;
+    @include np-shadow-inverse; 
+}
+
+button.np-btn:focus,
+.np-btn:focus,
+.np-square-sm:focus,
+.np-square-md:focus,
+.np-square-lg:focus,
+.np-square-xl:focus,
+.np-square-xxl:focus,
+.np-circle-sm:focus,
+.np-circle-md:focus,
+.np-circle-lg:focus,
+.np-circle-xl:focus,
+.np-circle-xxl:focus {
+    font-size: $text-decrease;
+}
+
+.np-shadow-inverse:focus {
+    outline: none;
+    @include np-shadow; 
+    font-size: $text-increase;
+}
+
+
+/*========================
+ General
+========================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body{
+    background: $background;
+    color: $foreground;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+/*========================
+ Anchors general
+========================*/
+a{
+    color: $foreground;
+    text-decoration: none;
+    &:hover{
+        color: $accent;
+        text-decoration: none;
+    }
+    &.selected{
+        color: $accent;
+        @include np-shadow-inverse;
+    }
+    &.active{
+        color: $accent;
+        @include np-shadow-inverse;
+    }
+    &.dropdown-item{
+        @include np-colorize();
+        padding-top: 0;
+        transition: all $transition-time;
+        &:hover{
+            @include np-shadow-inverse;
+            color: $accent;
+            background: $background;
+        }
+        &:active{
+            @include np-shadow-inverse;
+            color: $accent;
+            background: $background;
+        }
+        &:focus{
+            @include np-shadow-inverse;
+            color: $accent;
+            background: $background;
+        }
+    }
+}
+
+/*========================
+ Divs general
+========================*/
+div{
+    &.dropdown-menu{
+        @include np-colorize();
+    }
+}
+
+/*========================
+ Np main
+========================*/
+.np{
+
+    /*=================
+     Basics
+    ==================*/
+    &-element{     
+        @include basic-element; 
+        transition: all $transition-time;
+        &::after,
+        &::before{
+            transition: all $transition-time;
+        }
+    }
+
+    &-element-inverse{   
+        @include basic-element-inverse; 
+        font-size: $text-decrease;  
+        transition: all $transition-time;
+        &::after,
+        &::before{
+            transition: all $transition-time;
+        }
+    }
+    
+    &-colorize{     
+        @include np-colorize; 
+        &-inverse{     
+            @include np-colorize-inverse; 
+        }
+    }
+
+    &-shadow{      
+        @include np-shadow; 
+        &-inverse{      
+            @include np-shadow-inverse; 
+        }
+        &-double{      
+            @include np-shadow-double(); 
+        }
+        &-border-square{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+            }
+        }
+        &-border-circle{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+                border-radius: 50%;
+            }
+        }
+        &-border-square-push{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+            }
+
+            &:hover{
+                &::before{
+                    @include np-shadow();
+                }
+            }
+        }
+        &-border-circle-push{      
+            @include np-shadow();
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                @include np-shadow-inverse;
+                content: '';
+                display: block;
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 2;
+                top: 10%;
+                left: 10%;
+                border-radius: 50%;
+            }
+
+            &:hover{
+                &::before{
+                    @include np-shadow();
+                }
+            }
+        }
+    }
+    
+    &-hover{ 
+        transition: all $transition-time;
+        &:hover{ 
+            @include np-shadow-inverse;  
+            font-size: $text-decrease;
+        } 
+    }
+     
+    &-hover-inverse{ 
+        font-size: $text-decrease;
+        &:hover{ 
+            @include np-shadow;  
+            font-size: $text-increase; 
+        } 
+    }
+
+    /*=================
+     Buttons
+    ==================*/
+    &-btn{ 
+        @include basic-element; 
+        border: none; 
+        transition: all $transition-time cubic-bezier(0.23, 1, 0.320, 1);
+        border-radius: $radius;
+        line-height: 1.8rem;
+        padding: .4rem;
+        cursor: pointer;
+
+        &:hover{ 
+            @include np-shadow-inverse;  
+            font-size: $text-decrease;
+            color: $accent;
+        }
+        &:focus{ 
+            @include np-shadow-inverse;  
+            font-size: $text-decrease; 
+            color: $accent;
+        }
+    }
+
+    
+    /*=================
+     Shapes
+    ==================*/
+    &-divider{
+        @include np-colorize; 
+        @include np-shadow; 
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: .8em auto;
+        float: none;
+        border-radius: $radius;
+
+        &-fat{
+            @include np-colorize; 
+            @include np-shadow; 
+            display: block;
+            width: 100%;
+            height: 8px;
+            margin: .8em auto;
+            float: none;
+            border-radius: $radius;
+        }
+    }
+
+    &-square{ 
+
+        &-sm{
+            width: $size-sm;
+            height: $size-sm;
+            overflow: hidden;
+        }
+        &-md{
+            width: $size-md;
+            height: $size-md;
+            overflow: hidden;
+        }
+        &-lg{
+            width: $size-lg;
+            height: $size-lg;
+            overflow: hidden;
+        }
+        &-xl{
+            width: $size-xl;
+            height: $size-xl;
+            overflow: hidden;
+        }
+        &-xxl{
+            width: $size-xxl;
+            height: $size-xxl;
+            overflow: hidden;
+        }
+    }
+
+    &-circle{ 
+
+        &-sm{
+            width: $size-sm;
+            height: $size-sm;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-md{
+            width: $size-md;
+            height: $size-md;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-lg{
+            width: $size-lg;
+            height: $size-lg;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-xl{
+            width: $size-xl;
+            height: $size-xl;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-xxl{
+            width: $size-xxl;
+            height: $size-xxl;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+
+    /*=================
+     Lists
+    ==================*/
+    &-list{
+        list-style: none;
+        padding-left: 0;
+        &-element{
+            @include basic-element; 
+            height: 100%;
+            padding-left: 1rem;
+            line-height: 2rem;
+            margin-bottom: .4rem;
+        }
+    }
+
+    /*=================
+     Forms
+    ==================*/
+    &-form{
+
+        &-group{
+            @include basic-element;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: .3rem;
+        }
+
+        &-element{
+            @include basic-element; 
+            padding: .6rem .5rem;
+            color: $accent;
+            margin-bottom: .3rem;
+            transition: $transition-time
+        }
+
+        &-check {
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &-label {
+                @include basic-element;
+                padding: .4rem 2.5rem .4rem 1rem;
+                border-radius: 20px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                &::before {
+                    @include basic-element;
+                    content: '';
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    border-radius: 50%;
+                    position: absolute;
+                    padding: .3rem;
+                    right: 5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all $transition-time;
+                }
+
+                &:hover {
+                    &::before {
+                        @include np-shadow-double();
+                    }
+                }
+            }
+
+            &:checked ~ label {
+                &::before {
+                    @include np-shadow-inverse;
+                }
+            }
+        }
+        
+    }
+
+    &-table{
+        @include basic-element();
+        width: 100%;
+
+        &-heading{
+            height: 6.5vh;
+            padding-top: .8rem;
+        }
+
+        &-row{
+            @include basic-element; 
+            height: 100%;
+            min-height: 6.5vh;
+            padding-top: .4rem;
+            padding-bottom: .4rem;
+            padding-left: 1rem;
+            line-height: 6.5vh;
+        }
+    }
+
+    /*=================
+     Sizes
+    ==================*/
+    &-0-5x{
+        font-size: 0.5rem;
+    }
+
+    &-0-8x{
+        font-size: 0.8rem;
+    }
+
+    &-1-5x{
+        font-size: 1.5rem;
+    }
+
+    &-2x{
+        font-size: 2rem;
+    }
+
+    &-2-5x{
+        font-size: 2.5rem;
+    }
+
+    &-3x{
+        font-size: 3rem;
+    }
+
+    &-0-5tx{
+        transform: scale(0.5);
+    }
+
+    &-0-8tx{
+        transform: scale(0.8);
+    }
+
+    &-1-5tx{
+        transform: scale(1.15);
+    }
+
+    &-2tx{
+        transform: scale(1.5);
+    }
+    &-3tx{
+        transform: scale(2);
+    }
+
+    /*=================
+     Text
+    ==================*/
+    &-text{
+        &-shadow{      
+            @include np-text-shadow; 
+            &-inverse{      
+                @include np-text-shadow-inverse; 
+            }
+        }
+
+        &-primary{      
+            color: $primary; 
+        }
+        &-success{      
+            color: $success; 
+        }
+        &-accent{      
+            color: $accent; 
+        }
+        &-warn{      
+            color: $warn; 
+        }
+        &-warning{      
+            color: $warning; 
+        }
+        &-info{      
+            color: $info; 
+        }
+        &-secondary{      
+            color: $secondary; 
+        }
+        &-dark{      
+            color: $dark; 
+        }
+        &-light{      
+            color: $light; 
+        }
+        &-foreground{      
+            color: $foreground; 
+        }
+        &-background{      
+            color: $background; 
+        }
+    }
+
+    /*=================
+     Background
+    ==================*/
+    &-bg{
+        &-shadow{      
+            @include np-text-shadow; 
+            &-inverse{      
+                @include np-text-shadow-inverse; 
+            }
+        }
+
+        &-primary{      
+            background: $primary; 
+        }
+        &-success{      
+            background: $success; 
+        }
+        &-accent{      
+            background: $accent; 
+        }
+        &-warn{      
+            background: $warn; 
+        }
+        &-warning{      
+            background: $warning; 
+        }
+        &-info{      
+            background: $info; 
+        }
+        &-secondary{      
+            background: $secondary; 
+        }
+        &-dark{      
+            background: $dark; 
+        }
+        &-light{      
+            background: $light; 
+        }
+        &-foreground{      
+            background: $foreground; 
+        }
+        &-background{      
+            background: $background; 
+        }
+    }
+
+    /*========================
+    Images
+    ========================*/
+    &-img{
+        &-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 0;
+        }
+        &-expand{
+            height: 100%;            
+            object-fit: cover;
+        }
+    }
+    
+    /*========================
+     Cursor
+    ========================*/
+    &-pointer{
+        cursor: pointer;
+    }
+
+}

@@ -1,0 +1,32 @@
+{
+  "name": "neumorph.scss",
+  "version": "0.1.1",
+  "description": "Easy neumorphism designs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph.css",
+    "sass-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph.min.css --style=compressed",
+    "sass-full": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph-full.css",
+    "sass-full-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/light/neumorph-full.min.css --style=compressed",
+    "sass-dark": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-dark.css",
+    "sass-dark-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-dark.min.css --style=compressed",
+    "sass-dark-full": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-full-dark.css",
+    "sass-dark-full-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/dark/neumorph-full-dark.min.css --style=compressed",
+    "sass-custom": "sass ./src/assets/scss/neumorph.scss ./dist/css/custom/neumorph-custom.css",
+    "sass-custom-min": "sass ./src/assets/scss/neumorph.scss ./dist/css/custom/neumorph-custom.min.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChemaAlfonso/neumorph.scss.git"
+  },
+  "author": "Chema Alfonso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChemaAlfonso/neumorph.scss/issues"
+  },
+  "homepage": "https://github.com/ChemaAlfonso/neumorph.scss#readme",
+  "devDependencies": {
+    "sass": "^1.25.0"
+  }
+}
